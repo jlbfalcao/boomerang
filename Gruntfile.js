@@ -3,6 +3,8 @@
 "use strict";
 module.exports = function (grunt) {
 
+	var beacon_url = grunt.option('beacon_url');
+
     var src = [ "boomerang.js" ];
     var plugins = grunt.file.readJSON("plugins.json");
     src.push(plugins.plugins);
@@ -16,6 +18,7 @@ module.exports = function (grunt) {
 		    block : true,
 		    line: true
 		},
+        footer: beacon_url ? ";BOOMRR.init({beacon_url: '" + beacon_url + "', autorun: true});" : '',
 		seperator: ";"
 	    },
 	    debug: {
