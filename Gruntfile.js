@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 		    block : true,
 		    line: true
 		},
-        footer: beacon_url ? ";BOOMRR.init({beacon_url: '" + beacon_url + "', autorun: true});" : '',
+        footer: beacon_url ? ";BOOMR.init({beacon_url: '" + beacon_url + "', autorun: true});" : '',
 		seperator: ";"
 	    },
 	    debug: {
